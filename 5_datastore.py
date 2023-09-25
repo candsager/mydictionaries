@@ -14,8 +14,9 @@ room-number,use,sq-ft,price
 104,office,150,100
 
 '''
-
-
+import csv 
+outfile = open('retail_space.csv', 'w')
+outfile.write('Room-number, use, sq-ft, price\n')
 
 
 datastore = { "medical":[
@@ -47,3 +48,22 @@ datastore = { "medical":[
 
       ]
 }
+
+for record in datastore["medical"]:
+    room = record['room-number'],record['use'],record['sq-ft'],record['price']
+
+    outfile.write(f"{room}\n") 
+outfile.close()
+  
+
+#JOHNNY'S 
+#outfile /.....
+#outfile.write....
+# list_of_dict = datastore["medical"]
+# for a_dict in list_of_dict:
+#   room = a_dict['room-number']
+#   use = a_dict['use']
+#   sqft = a_dict['sq-ft']
+#   price = a_dict['price']
+#   outfile.write(f"{room},{use},{sqft},{price}\n")
+# outfile.close()  

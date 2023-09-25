@@ -207,3 +207,23 @@ ProduceDictionary={
     }
 }
 
+#list_of_prod = ProduceDictionary
+#for prod in list_of_prod:
+ #   produce = prod[''],prod['cost'],prod['amt_sold'],prod['total']
+  #  if ProduceDictionary['total'] != prod['cost']*prod['amt_sold']:
+   #     print(f{'produce name: ',{\n}, 'Calculated total: ', {prod['cost']*prod['amt_sold']\n}, 'Stated Total: ', prod['total']})
+
+
+for produce in ProduceDictionary:
+    cost = float(ProduceDictionary[produce]['cost'])
+    amt_sold = float(ProduceDictionary[produce]['amt_sold'])
+    stated_total = float(ProduceDictionary[produce]['total'])
+
+    calc_total = cost * amt_sold
+
+    if stated_total != calc_total:
+    print(f"produce name: {produce}")
+    print(f"Stated total: ${stated_total}")
+    print(f"calculated total: ${stated_total: .2f}")
+    print()
+    print()
