@@ -222,8 +222,8 @@ for produce in ProduceDictionary:
     calc_total = cost * amt_sold
 
     if stated_total != calc_total:
-    print(f"produce name: {produce}")
-    print(f"Stated total: ${stated_total}")
-    print(f"calculated total: ${stated_total: .2f}")
-    print()
-    print()
+        print(f"produce name: {produce}")
+        print(f"Stated total: ${stated_total}")
+        print(f"calculated total: ${stated_total: .2f}")
+        print()
+        print()
